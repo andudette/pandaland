@@ -2,14 +2,19 @@
   padding: 3% 2%;
 }
 
+.row{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
 .black-section {
   background-color: #040A02;
-  color: #F2F7F6;
+  /* color: #F2F7F6; */
+  color: white;
 }
 
 .white-section {
-  background-color: #F2F7F6;
+  background-color: white;
   color: #040A02;
 }
 
@@ -20,10 +25,23 @@
   font-family: 'PT Sans', sans-serif;
 }
 
-.nav-link,
+.intro-main-text, 
+.intro-text, 
+.message, 
+.secondary-text,
+.footer-text,
+.ending-text {
+  font-family: 'Hind Madurai', sans-serif;
+}
+
 .custom-link {
-  color: #F2F7F6;
+  color: white;
   font-weight: bold;
+}
+
+.custom-link:hover {
+  color: #5F7C23;
+  text-decoration: none;
 }
 
 .text-col {
@@ -50,30 +68,42 @@
   .secondary-text {
     font-size: 1rem;
   }
-
 }
 
 @media (max-width: 992px) {
 
-  .secondary-header, .secondary-text {
+  .secondary-header, .secondary-text, .ending-text {
     text-align: center;
     padding: 0 7%;
   }
 
   .secondary-header {
     font-size: 2.5rem;
+    padding-bottom: 5%;
   }
   
   .secondary-text {
     font-size: 1.1rem;
   }
 
+  .text-col {
+    padding: 4% 3% 4% 3%;
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .artwork {
+    padding-bottom: 3%;
+  }
 }
 
 /*Nav bar */
 
 .navbar {
   height: fit-content;
+  margin-right: 3%;
 }
 
 .navbar-brand {
@@ -85,11 +115,11 @@
 }
 
 .nav-item {
-  padding: 10px;
+  padding: 10px 15px;
 }
 
 .nav-link:hover {
-  background-color: #158457;
+  background-color: #5F7C23;
   border-radius: 5%;
 }
 
@@ -102,92 +132,101 @@
 
 /* Title section */
 
-.title-left,
-.title-right {
+.img-container {
+  /* Using linear-gradient with rgba() allows you to apply a gradient to
+  your background image that makes it look as though its opacity has 
+  been lowered even though it hasn't (bc that can't be done in CSS without affecting child elements) 
+  Important!: set the altered background image BEFORE the CSS meant to
+  apply the parallax effect */
+  /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://www.efeverde.com/storage/2017/09/oso-panda-bamb%C3%BA-alimentaci%C3%B3n.jpg"); */
+  background-image: url(https://www.efeverde.com/storage/2017/09/oso-panda-bamb%C3%BA-alimentaci%C3%B3n.jpg);
+
+   /* Set a specific height  */
+  min-height: 700px;
+
+  /* Create the parallax scrolling effect  */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-container {
+  background-color: rgba(255, 255, 255, 0.8);
   position: relative;
-  margin: 150px 0;
-}
-
-.title-left {
-  background-color: #F2F7F6;
-  color: #040A02;
-  border-radius: 5%;
-  bottom: 50px;
-  max-width: 500px;
-}
-
-.title-right {
-  max-width: 500px;
-  top: 50px;
-}
-
-.panda-img {
-  border-radius: 5%;
-  width: 500px;
-}
-
-.text-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  top: 470px;
+  margin: auto auto 3% 3%;
 }
 
 .title-header {
   font-weight: bold;
-  font-size: 4rem;
-  padding: 40px;
-  line-height: 1.5;
+  font-size: 4.5rem;
+  padding: 10px;
+  color: black;
+  text-align: center;
 }
 
+@media (max-width: 1300px) {
+  .title-header {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .header-container {
+    margin: auto 3% 3%;
+    top: 520px;
+  }
+
+  .img-container {
+    background-attachment: scroll;
+    background-position: top right;
+  }
+}
 
 @media (max-width: 768px) {
-
-  .title-left,
-  .title-right {
-    margin: 3% auto;
-    position: static;
-  }
-
-  .title-left {
-    background-color: #040A02;
-  }
-
-  .text-container {
-    position: static;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    color: #F2F7F6;
-  }
-
   .title-header {
-    font-size: 5rem;
-    padding-bottom: 0;
+    font-size: 3rem;
   }
 }
 
-@media (max-width: 992) {
+@media (max-width: 720px) {
+  .img-container {
+    background-position: top;
+  }
+}
 
-  .title-header {
-    padding-left: 30px;
+@media (max-width: 450px) {
+
+  .img-container {
+    background-position: 60% 10%;
   }
 }
 
 
 /* Intro */
 
+.icon-text {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 1%;
+}
+
+.icon-text:hover {
+  color: #5F7C23;
+}
+
 .intro-main-text {
-  padding: 7% 15% 5%;
+  padding: 3% 15% 5%;
   line-height: 1.5;
-  font-size: larger;
+  font-size: 1.3rem;
   text-align: left;
 }
 
 .intro-text {
   line-height: 1.5;
-  font-size: large;
+  font-size: 1.1rem;
   text-align: center;
   padding: 5%;
 }
@@ -197,7 +236,7 @@
   margin-bottom: 20px;
 }
 
-/* Hall of fame section */
+/* Characters section */
 
 .chara-div {
   max-width: 400px;
@@ -208,34 +247,54 @@
   .chara-div {
     max-width: 300px;
   }
+
+  .intro-main-text {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-text {
+    padding: 3% 7% ;
+  }
+
+  .intro-main-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .intro-text {
+    font-size: 0.9rem;
+  }
+}
+
+.chara-btn {
+  text-align: center;
 }
 
 .chara-btn:hover {
-  color: #158457;
+  color: #5F7C23;
 }
 
 /* Messages section */
 
-.img-container {
-  /* Using linear-gradient with rgba() allows you to apply a gradient to
-  your background image that makes it look as though its opacity has 
-  been lowered even though it hasn't (bc that can't be done in CSS without affecting child elements) 
-  Important!: set the altered background image BEFORE the CSS meant to
-  apply the parallax effect */
-  background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url("https://www.efeverde.com/storage/2017/09/oso-panda-bamb%C3%BA-alimentaci%C3%B3n.jpg");
+#messages {
+  position: relative;
+  z-index: 1;
+}
 
-   /* Set a specific height  */
-  min-height: 500px;
-
-  /* Create the parallax scrolling effect  */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#messages .secondary-text {
+  text-align: center;
+  padding-top: 5%;
 }
 
 .carousel {
-  padding: 7% 15%;
+  padding: 2% 7%;
 }
 
 .carousel-control-prev-icon,
@@ -260,8 +319,13 @@
 
 @media (max-width: 992px) {
 
-  .img-container {
-    background: #F2F7F6;
+  .message {
+    line-height: 1.2;
+    font-size: 0.9rem;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    padding: 0;
   }
 }
 
@@ -284,18 +348,18 @@
     z-index: 0;
   }
 
-  #ending {
+ /*  #art {
     position: static;
     z-index: 0;
-  }
+  } */
 }
+
+/* Iris' art section */
+
+
 
 /* Ending section */
 
-#ending {
-  position: relative;
-  z-index: 1;
-}
 
 .video-container {
   position: relative;
@@ -315,19 +379,9 @@
   height: 100%;
 }
 
-
-
-
-
-
 /* Credits section */
 
 #credits {
   text-align: center;
   font-size: 0.8rem;
-}
-
-.custom-link:hover {
-  color: #158457;
-  font-weight: bold;
 }
