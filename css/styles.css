@@ -89,7 +89,14 @@
   .text-col {
     padding: 4% 3% 4% 3%;
   }
+}
 
+.col-art {
+  text-align: center;
+}
+
+.artwork {
+  max-height: 700px;
 }
 
 @media (max-width: 992px) {
@@ -140,7 +147,7 @@
   apply the parallax effect */
   /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://www.efeverde.com/storage/2017/09/oso-panda-bamb%C3%BA-alimentaci%C3%B3n.jpg"); */
   background-image: url(https://www.efeverde.com/storage/2017/09/oso-panda-bamb%C3%BA-alimentaci%C3%B3n.jpg);
-
+ 
    /* Set a specific height  */
   min-height: 700px;
 
