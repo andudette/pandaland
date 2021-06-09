@@ -259,6 +259,7 @@
 }
 
 @media (max-width: 768px) {
+
   .intro-text {
     padding: 3% 7% ;
   }
@@ -270,6 +271,12 @@
 
   .intro-text {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width:576px) {
+  .chara-div {
+    font-size: 0.8rem;
   }
 }
 
